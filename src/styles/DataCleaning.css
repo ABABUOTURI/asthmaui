@@ -1,0 +1,62 @@
+/* General Styling */
+.p-4 {
+    padding: 16px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  
+  th, td {
+    border: 1px solid #d1d5db; /* Gray-300 */
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #e5e7eb; /* Gray-200 */
+    font-weight: bold;
+  }
+  
+  /* Alternating Row Colors */
+  tbody tr:nth-child(even) {
+    background-color: #f9fafb; /* Gray-100 */
+  }
+  
+  /* Issue List Styling */
+  .list-disc {
+    margin-top: 10px;
+    color: #dc2626; /* Red-600 */
+  }
+  
+  /* Success Message */
+  .text-green-600 {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #16a34a; /* Green-600 */
+  }
+  
+  /* Icons Styling */
+  .flex.items-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mr-2 {
+    margin-right: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .p-4 {
+      padding: 10px;
+    }
+  
+    th, td {
+      padding: 8px;
+    }
+  }
+  
