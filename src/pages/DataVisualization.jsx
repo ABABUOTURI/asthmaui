@@ -34,17 +34,26 @@ function DataVisualization() {
           <div
             key={index}
             className={`visualization-card ${
-              viz.plot_name === "Feature Distribution by Cluster"
-                ? "wide-card"
-                : ""
+              viz.plot_name === "Feature Distribution by Cluster" ? "wide-card" : ""
             }`}
           >
             <h3 className="chart-title">{viz.plot_name}</h3>
-            <img
-              src={`http://localhost:5000/${viz.plot_path}`}
-              alt={viz.plot_name}
-              className="chart-image"
-            />
+            {/* Display interactive plot */}
+            {viz.plot_name === "Interactive Cluster Visualization" ? (
+              <iframe
+                src={`http://localhost:5000/${viz.plot_path}`}
+                width="100%"
+                height="500px"
+                title={viz.plot_name}
+                className="chart-image"
+              />
+            ) : (
+              <img
+                src={`http://localhost:5000/${viz.plot_path}`}
+                alt={viz.plot_name}
+                className="chart-image"
+              />
+            )}
           </div>
         ))}
       </div>
